@@ -12,6 +12,11 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+    "types": [
+            "core-js",
+            "node",
+            "jquery"
+        ],
     "lib": [
       "es2016",
       "dom"

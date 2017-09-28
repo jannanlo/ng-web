@@ -7,9 +7,10 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
     constructor(private translate: TranslateService) {
-        translate.addLangs(['en', 'fr', 'ur', 'es', 'it', 'fa']);
-        translate.setDefaultLang('en');
+        translate.addLangs(['zh','en', 'fr', 'ur', 'es', 'it', 'fa']);
+        translate.setDefaultLang('zh');
         const browserLang = translate.getBrowserLang();
-        translate.use(browserLang.match(/en|fr|ur|es|it|fa/) ? browserLang : 'en');
+        console.log("lang=",browserLang);
+        translate.use(browserLang.match(/zh|en|fr|ur|es|it|fa/) ? browserLang : 'en');
     }
 }
